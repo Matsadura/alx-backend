@@ -14,7 +14,7 @@ class FIFOCache(BaseCaching):
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             print(f'DISCARD: {list(self.cache_data)[0]}')
             del self.cache_data[list(self.cache_data)[0]]
- 
+
     def get(self, key):
         """ Get an item by key """
         if key is None or key not in self.cache_data:
